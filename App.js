@@ -97,10 +97,7 @@ export default function App() {
           </Text>
         </TouchableOpacity>
       </View>
-      <Link url={wikiUrl} 
-        style={{ borderLeftColor:"#000000", borderLeftWidth:1, borderRightWidth:1}}>
-        Conoce la técnica pomodoro aquí
-      </Link>
+      <Link url={wikiUrl}>Conoce la técnica pomodoro aquí</Link>
     </SafeAreaView>
   );
 }

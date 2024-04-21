@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, Linking} from "react-native";
 import {useCallback } from "react";
-export default function Link({ url, style, children }) {
+export default function Link({ url, children }) {
   const handlePress = useCallback(async () => {
     const supported = await Linking.canOpenURL(url);
     if (supported) {
@@ -11,7 +11,7 @@ export default function Link({ url, style, children }) {
   }, [url]);
 
   return (
-    <TouchableOpacity style={[style,styles.buttonLink]} >
+    <TouchableOpacity style={styles.buttonLink} onPress={handlePress}>
       <Text style={styles.buttonLinkText}>{children}</Text>
     </TouchableOpacity>
   );
@@ -21,8 +21,7 @@ const styles = StyleSheet.create({
   buttonLink: {
     position: "absolute",
     width: "100%",
-    minHeight:49,
-    bottom: 1,
+    bottom: 0,
     left: 0,
     right: 0,
     backgroundColor: "#F2F2F2",
@@ -30,7 +29,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     borderRadius: 0,
     alignItems: "center",
-    justifyContent:"center" 
   },
   buttonLinkText: {
     color: "blue",

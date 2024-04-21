@@ -53,14 +53,10 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 5,
     borderTopStartRadius: 5,
     alignItems: "center",
-    // paddingTop:7,
-    // paddingBottom:7,
   },
   textTab: {
     fontWeight: "bold",
     fontSize: 16,
-    marginTop:7,
-    marginBottom:7,
   },
   headerNotSelected: {
     borderColor: "transparent",
